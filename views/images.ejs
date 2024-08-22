@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imágenes</title>
+</head>
+<body>
+  <h1>Galería de Imágenes</h1>
+  <% if (images.length > 0) { %>
+    <ul>
+      <% images.forEach(image => { %>
+        <li>
+          <h3><%= image.name %></h3>
+          <img src="<%= image.url %>" alt="<%= image.name %>" width="300">
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No hay imágenes disponibles.</p>
+  <% } %>
+  <a href="/">Subir otra imagen</a>
+</body>
+</html>

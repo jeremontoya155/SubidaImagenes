@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado de la Subida</title>
+</head>
+<body>
+  <h1><%= message %></h1>
+  <% if (imageUrl) { %>
+    <p>Imagen subida:</p>
+    <img src="<%= imageUrl %>" alt="Imagen subida">
+  <% } else { %>
+    <p>Ocurrió un error al subir la imagen.</p>
+  <% } %>
+  <a href="/">Subir otra imagen</a>
+</body>
+</html>
