@@ -75,7 +75,9 @@ app.get('/images', async (req, res) => {
   }
 });
 
-// Iniciar el servidor
-app.listen(3000, () => {
-  console.log('Servidor corriendo en http://localhost:3000');
+// Obtener el puerto desde el archivo .env o usar 7500 por defecto
+const PORT = process.env.PORT || 7500;
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
